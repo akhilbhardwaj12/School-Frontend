@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./Attendance.css";
-const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+const API_BASE_URL =
+    import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const STUDENTS_API = `${API_BASE_URL}/students`;
 const CLASSES_API = `${API_BASE_URL}/classes`;
