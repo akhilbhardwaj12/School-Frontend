@@ -1,0 +1,443 @@
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard-page {
+    min-height: 100%;
+    padding: 32px 40px 50px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.dashboard-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.dashboard-title-section h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.dashboard-title-section p {
+    margin: 8px 0 0;
+    color: #7b8798;
+    font-size: 16px;
+}
+
+.dashboard-date {
+    background: white;
+    border: 1px solid #e1e7ef;
+    border-radius: 10px;
+    padding: 12px 18px;
+    color: #475569;
+    font-size: 14px;
+}
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e6ebf2;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.student-icon {
+    background: #eef2ff;
+}
+
+.teacher-icon {
+    background: #fff1f2;
+}
+
+.class-icon {
+    background: #fff7ed;
+}
+
+.attendance-icon {
+    background: #ecfdf5;
+}
+
+.stat-card p {
+    margin: 0 0 5px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.stat-card h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 27px;
+}
+
+.stat-positive {
+    display: block;
+    margin-top: 5px;
+    color: #16a34a;
+    font-size: 12px;
+}
+
+/* =====================================================
+   MAIN GRID
+===================================================== */
+
+.dashboard-main-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.dashboard-card {
+    background: white;
+    border: 1px solid #e6ebf2;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.card-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 20px;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+    color: #8994a5;
+    font-size: 13px;
+}
+
+.view-all-btn {
+    border: none;
+    background: transparent;
+    color: #315eea;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.view-all-btn:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   STUDENTS
+===================================================== */
+
+.student-list {
+    padding: 8px 24px 14px;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.student-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.student-info strong {
+    color: #172033;
+    font-size: 15px;
+}
+
+.student-info span {
+    color: #7b8798;
+    font-size: 13px;
+}
+
+.active-badge {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   ATTENDANCE
+===================================================== */
+
+.attendance-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    padding: 35px 25px;
+}
+
+.attendance-circle {
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            #5146e5 0deg 338deg,
+            #e8ecf4 338deg 360deg
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attendance-inner {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.attendance-inner strong {
+    color: #172033;
+    font-size: 34px;
+}
+
+.attendance-inner span {
+    color: #8994a5;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.attendance-details {
+    min-width: 150px;
+}
+
+.attendance-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.attendance-row strong {
+    color: #172033;
+    font-size: 18px;
+}
+
+.attendance-row span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.present-dot {
+    background: #22c55e;
+}
+
+.absent-dot {
+    background: #ef4444;
+}
+
+.leave-dot {
+    background: #f59e0b;
+}
+
+/* =====================================================
+   QUICK ACTIONS
+===================================================== */
+
+.quick-actions-card {
+    margin-bottom: 20px;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 24px;
+}
+
+.quick-action-btn {
+    min-height: 115px;
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 13px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-action-btn:hover {
+    border-color: #315eea;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(49, 94, 234, 0.12);
+}
+
+.quick-action-icon {
+    width: 48px;
+    height: 48px;
+    background: #eef2ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.quick-action-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.quick-action-text strong {
+    color: #172033;
+    font-size: 14px;
+}
+
+.quick-action-text small {
+    color: #8994a5;
+    font-size: 11px;
+}
+
+.quick-action-arrow {
+    color: #315eea;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .dashboard-page {
+        padding: 25px 20px;
+    }
+
+    .dashboard-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-content {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .dashboard-title-section {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dashboard-title-section h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-content {
+        flex-direction: column;
+    }
+}

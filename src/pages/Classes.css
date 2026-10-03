@@ -1,0 +1,689 @@
+/* =====================================================
+   Classes Page
+   School Management System
+   ===================================================== */
+
+.classes-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.classes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    gap: 20px;
+}
+
+.classes-title-section h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.1;
+}
+
+.classes-title-section p {
+    margin: 12px 0 0;
+    font-size: 22px;
+    color: #64748b;
+}
+
+/* =====================================================
+   HEADER ACTIONS
+   ===================================================== */
+
+.classes-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.refresh-btn,
+.add-class-btn {
+    height: 64px;
+    padding: 0 28px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #dbe2ea;
+}
+
+.refresh-btn {
+    background: #ffffff;
+    color: #334155;
+}
+
+.refresh-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.add-class-btn {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.add-class-btn:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* =====================================================
+   MAIN CARD
+   ===================================================== */
+
+.classes-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.classes-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 20px;
+}
+
+.class-search {
+    width: 450px;
+    max-width: 100%;
+    height: 54px;
+    padding: 0 18px;
+    border: 1px solid #d6dde8;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    color: #1e293b;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.class-search::placeholder {
+    color: #94a3b8;
+}
+
+.class-search:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =====================================================
+   TABLE WRAPPER
+   ===================================================== */
+
+.classes-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 14px;
+}
+
+.classes-table {
+    width: 100%;
+    min-width: 950px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* =====================================================
+   TABLE HEADER
+   ===================================================== */
+
+.classes-table thead {
+    background: #f8fafc;
+}
+
+.classes-table th {
+    padding: 20px 18px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.classes-table th:nth-child(1) {
+    width: 20%;
+}
+
+.classes-table th:nth-child(2) {
+    width: 15%;
+}
+
+.classes-table th:nth-child(3) {
+    width: 20%;
+}
+
+.classes-table th:nth-child(4) {
+    width: 15%;
+}
+
+.classes-table th:nth-child(5) {
+    width: 12%;
+}
+
+.classes-table th:nth-child(6) {
+    width: 18%;
+}
+
+/* =====================================================
+   TABLE BODY
+   ===================================================== */
+
+.classes-table td {
+    padding: 24px 18px;
+    font-size: 17px;
+    color: #334155;
+    border-bottom: 1px solid #edf1f5;
+    vertical-align: middle;
+}
+
+.classes-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.classes-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.classes-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =====================================================
+   CLASS NAME
+   ===================================================== */
+
+.class-name {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.class-code {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* =====================================================
+   SECTION
+   ===================================================== */
+
+.class-section {
+    font-weight: 600;
+    color: #334155;
+}
+
+/* =====================================================
+   TEACHER
+   ===================================================== */
+
+.class-teacher {
+    color: #475569;
+}
+
+/* =====================================================
+   STUDENT COUNT
+   ===================================================== */
+
+.student-count {
+    font-weight: 600;
+    color: #334155;
+}
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.class-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.class-status.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.class-status.inactive {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* =====================================================
+   ACTIONS
+   ===================================================== */
+
+.class-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.class-action-btn {
+    min-width: 74px;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid #dbe3ed;
+    background: #ffffff;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.class-action-btn:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.class-action-btn.view:hover {
+    color: #2563eb;
+    border-color: #93c5fd;
+    background: #eff6ff;
+}
+
+.class-action-btn.edit:hover {
+    color: #7c3aed;
+    border-color: #c4b5fd;
+    background: #f5f3ff;
+}
+
+.class-action-btn.delete {
+    color: #dc2626;
+}
+
+.class-action-btn.delete:hover {
+    color: #b91c1c;
+    border-color: #fca5a5;
+    background: #fef2f2;
+}
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.classes-empty {
+    text-align: center;
+    padding: 70px 20px;
+    color: #64748b;
+}
+
+.classes-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.classes-empty h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: #334155;
+}
+
+.classes-empty p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.classes-loading {
+    text-align: center;
+    padding: 70px 20px;
+    color: #64748b;
+    font-size: 18px;
+}
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.classes-error {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    font-size: 15px;
+}
+
+/* =====================================================
+   MODAL OVERLAY
+   ===================================================== */
+
+.class-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* =====================================================
+   MODAL
+   ===================================================== */
+
+.class-modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.class-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.class-modal-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #111827;
+}
+
+.class-modal-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.class-modal-close:hover {
+    background: #e2e8f0;
+}
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.class-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.class-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.class-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.class-form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.class-form-group input,
+.class-form-group select,
+.class-form-group textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 1px solid #d6dde8;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    color: #1e293b;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.class-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.class-form-group input:focus,
+.class-form-group select:focus,
+.class-form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =====================================================
+   MODAL FOOTER
+   ===================================================== */
+
+.class-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.class-cancel-btn,
+.class-save-btn {
+    min-width: 110px;
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.class-cancel-btn {
+    background: #ffffff;
+    border: 1px solid #d1d9e4;
+    color: #475569;
+}
+
+.class-cancel-btn:hover {
+    background: #f8fafc;
+}
+
+.class-save-btn {
+    background: #2563eb;
+    border: 1px solid #2563eb;
+    color: #ffffff;
+}
+
+.class-save-btn:hover {
+    background: #1d4ed8;
+}
+
+.class-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =====================================================
+   VIEW MODAL DETAILS
+   ===================================================== */
+
+.class-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.class-detail-item {
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.class-detail-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.class-detail-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.class-detail-value {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+    .classes-page {
+        padding: 25px;
+    }
+
+    .classes-header {
+        flex-direction: column;
+    }
+
+    .classes-header-actions {
+        width: 100%;
+    }
+
+    .refresh-btn,
+    .add-class-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .classes-page {
+        padding: 18px;
+    }
+
+    .classes-title-section h1 {
+        font-size: 36px;
+    }
+
+    .classes-title-section p {
+        font-size: 18px;
+    }
+
+    .classes-header-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .refresh-btn,
+    .add-class-btn {
+        width: 100%;
+    }
+
+    .classes-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .classes-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .class-search {
+        width: 100%;
+    }
+
+    .class-form {
+        grid-template-columns: 1fr;
+    }
+
+    .class-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .class-details {
+        grid-template-columns: 1fr;
+    }
+
+    .class-detail-item.full-width {
+        grid-column: auto;
+    }
+
+    .class-modal {
+        padding: 20px;
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+    .classes-page {
+        padding: 12px;
+    }
+
+    .classes-title-section h1 {
+        font-size: 30px;
+    }
+
+    .classes-card {
+        padding: 12px;
+    }
+
+    .class-modal-footer {
+        flex-direction: column;
+    }
+
+    .class-cancel-btn,
+    .class-save-btn {
+        width: 100%;
+    }
+}
