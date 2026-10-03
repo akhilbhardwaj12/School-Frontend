@@ -1,9 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./Attendance.css";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-const STUDENTS_API = "http://localhost:5000/api/students";
-const CLASSES_API = "http://localhost:5000/api/classes";
-const ATTENDANCE_API = "http://localhost:5000/api/attendance";
+const STUDENTS_API = `${API_BASE_URL}/students`;
+const CLASSES_API = `${API_BASE_URL}/classes`;
+const ATTENDANCE_API = `${API_BASE_URL}/attendance`;
+
 
 const Attendance = () => {
     const [students, setStudents] = useState([]);
