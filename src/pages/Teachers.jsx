@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./Teachers.css";
 
-const API_URL = "http://localhost:5000/api/teachers";
+const API_URL = "https://your-backend.vercel.app/api/teachers";
 
 const EMPTY_FORM = {
     firstName: "",
